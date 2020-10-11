@@ -8,7 +8,6 @@
 import Foundation
 import Contentful
 
-
 protocol RecipeRepositoryProtocol {
     func fetchRecipe(onCompletion: @escaping (Response) -> ())
 }
