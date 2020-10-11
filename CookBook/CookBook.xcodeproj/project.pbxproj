@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,8 @@
 		03EA6CCD2533651E009A4CCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03EA6CCC2533651E009A4CCD /* Assets.xcassets */; };
 		03EA6CD02533651E009A4CCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03EA6CCE2533651E009A4CCD /* LaunchScreen.storyboard */; };
 		03EA6CDB2533651E009A4CCD /* CookBookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EA6CDA2533651E009A4CCD /* CookBookTests.swift */; };
+		03EA6D0E25336F73009A4CCD /* RecipeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EA6D0D25336F73009A4CCD /* RecipeRepository.swift */; };
+		03EA6D1725336FA1009A4CCD /* RecipieDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EA6D1625336FA1009A4CCD /* RecipieDataModel.swift */; };
 		1A916E3AF91CCAD694BAF0CE /* Pods_CookBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 052C761CCE4F61FC3737454F /* Pods_CookBook.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +49,8 @@
 		03EA6CDA2533651E009A4CCD /* CookBookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookBookTests.swift; sourceTree = "<group>"; };
 		03EA6CDC2533651E009A4CCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03EA6CE12533651E009A4CCD /* CookBookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CookBookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		03EA6D0D25336F73009A4CCD /* RecipeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRepository.swift; sourceTree = "<group>"; };
+		03EA6D1625336FA1009A4CCD /* RecipieDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipieDataModel.swift; sourceTree = "<group>"; };
 		052C761CCE4F61FC3737454F /* Pods_CookBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CookBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC3FD4E429EADE20B4D96021 /* Pods-CookBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CookBook.debug.xcconfig"; path = "Target Support Files/Pods-CookBook/Pods-CookBook.debug.xcconfig"; sourceTree = "<group>"; };
 		DAAC02344D4CB81905C6FD92 /* Pods-CookBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CookBook.release.xcconfig"; path = "Target Support Files/Pods-CookBook/Pods-CookBook.release.xcconfig"; sourceTree = "<group>"; };
@@ -121,9 +125,9 @@
 		03EA6CFC253367F7009A4CCD /* App */ = {
 			isa = PBXGroup;
 			children = (
-				03EA6CCE2533651E009A4CCD /* LaunchScreen.storyboard */,
-				03EA6CC72533651D009A4CCD /* ViewController.swift */,
-				03EA6CC92533651D009A4CCD /* Main.storyboard */,
+				03EA6D0C25336D9B009A4CCD /* Domain */,
+				03EA6D0B25336D8D009A4CCD /* Data */,
+				03EA6D0A25336D80009A4CCD /* UI */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -162,6 +166,40 @@
 			path = DIContainer;
 			sourceTree = "<group>";
 		};
+		03EA6D0A25336D80009A4CCD /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				03EA6CCE2533651E009A4CCD /* LaunchScreen.storyboard */,
+				03EA6CC72533651D009A4CCD /* ViewController.swift */,
+				03EA6CC92533651D009A4CCD /* Main.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		03EA6D0B25336D8D009A4CCD /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				03EA6D1525336F84009A4CCD /* Models */,
+				03EA6D0D25336F73009A4CCD /* RecipeRepository.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		03EA6D0C25336D9B009A4CCD /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		03EA6D1525336F84009A4CCD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				03EA6D1625336FA1009A4CCD /* RecipieDataModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		B81B0DE66F159871AB83376C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -176,7 +214,6 @@
 				AC3FD4E429EADE20B4D96021 /* Pods-CookBook.debug.xcconfig */,
 				DAAC02344D4CB81905C6FD92 /* Pods-CookBook.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -355,8 +392,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				03EA6CC82533651D009A4CCD /* ViewController.swift in Sources */,
+				03EA6D0E25336F73009A4CCD /* RecipeRepository.swift in Sources */,
 				03EA6CC42533651D009A4CCD /* AppDelegate.swift in Sources */,
 				03EA6CC62533651D009A4CCD /* SceneDelegate.swift in Sources */,
+				03EA6D1725336FA1009A4CCD /* RecipieDataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
