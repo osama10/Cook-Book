@@ -22,6 +22,9 @@
 		03EA6D3D2533830A009A4CCD /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EA6D3C2533830A009A4CCD /* Recipe.swift */; };
 		03EA6D56253392AB009A4CCD /* RecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EA6D54253392AB009A4CCD /* RecipeTableViewCell.swift */; };
 		03EA6D57253392AB009A4CCD /* RecipeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03EA6D55253392AB009A4CCD /* RecipeTableViewCell.xib */; };
+		03EA6D6125339910009A4CCD /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EA6D6025339910009A4CCD /* Observable.swift */; };
+		03EA6D66253399EB009A4CCD /* RecipeCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EA6D65253399EB009A4CCD /* RecipeCellViewModel.swift */; };
+		03EA6D6C25339B76009A4CCD /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EA6D6B25339B76009A4CCD /* UIView+Extensions.swift */; };
 		1A916E3AF91CCAD694BAF0CE /* Pods_CookBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 052C761CCE4F61FC3737454F /* Pods_CookBook.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +66,9 @@
 		03EA6D3C2533830A009A4CCD /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		03EA6D54253392AB009A4CCD /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewCell.swift; sourceTree = "<group>"; };
 		03EA6D55253392AB009A4CCD /* RecipeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeTableViewCell.xib; sourceTree = "<group>"; };
+		03EA6D6025339910009A4CCD /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		03EA6D65253399EB009A4CCD /* RecipeCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCellViewModel.swift; sourceTree = "<group>"; };
+		03EA6D6B25339B76009A4CCD /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		052C761CCE4F61FC3737454F /* Pods_CookBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CookBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC3FD4E429EADE20B4D96021 /* Pods-CookBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CookBook.debug.xcconfig"; path = "Target Support Files/Pods-CookBook/Pods-CookBook.debug.xcconfig"; sourceTree = "<group>"; };
 		DAAC02344D4CB81905C6FD92 /* Pods-CookBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CookBook.release.xcconfig"; path = "Target Support Files/Pods-CookBook/Pods-CookBook.release.xcconfig"; sourceTree = "<group>"; };
@@ -182,6 +188,7 @@
 		03EA6D0A25336D80009A4CCD /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				03EA6D5F253398F9009A4CCD /* Utils */,
 				03EA6CCE2533651E009A4CCD /* LaunchScreen.storyboard */,
 				03EA6CC92533651D009A4CCD /* Main.storyboard */,
 				03EA6D4925338DE9009A4CCD /* Recipes */,
@@ -254,8 +261,26 @@
 			children = (
 				03EA6D54253392AB009A4CCD /* RecipeTableViewCell.swift */,
 				03EA6D55253392AB009A4CCD /* RecipeTableViewCell.xib */,
+				03EA6D65253399EB009A4CCD /* RecipeCellViewModel.swift */,
 			);
 			path = RecipeCell;
+			sourceTree = "<group>";
+		};
+		03EA6D5F253398F9009A4CCD /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				03EA6D6025339910009A4CCD /* Observable.swift */,
+				03EA6D6A25339B1D009A4CCD /* Extensions */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		03EA6D6A25339B1D009A4CCD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				03EA6D6B25339B76009A4CCD /* UIView+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		B81B0DE66F159871AB83376C /* Frameworks */ = {
@@ -450,9 +475,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03EA6D6125339910009A4CCD /* Observable.swift in Sources */,
 				03EA6CC82533651D009A4CCD /* RecipeViewController.swift in Sources */,
 				03EA6D56253392AB009A4CCD /* RecipeTableViewCell.swift in Sources */,
 				03EA6D0E25336F73009A4CCD /* RecipeRepository.swift in Sources */,
+				03EA6D66253399EB009A4CCD /* RecipeCellViewModel.swift in Sources */,
+				03EA6D6C25339B76009A4CCD /* UIView+Extensions.swift in Sources */,
 				03EA6CC42533651D009A4CCD /* AppDelegate.swift in Sources */,
 				03EA6CC62533651D009A4CCD /* SceneDelegate.swift in Sources */,
 				03EA6D1725336FA1009A4CCD /* RecipieDataModel.swift in Sources */,

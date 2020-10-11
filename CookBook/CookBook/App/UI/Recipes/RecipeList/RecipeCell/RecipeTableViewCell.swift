@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class RecipeTableViewCell: UITableViewCell {
 
@@ -14,13 +15,11 @@ class RecipeTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        imageView?.round()
     }
     
+    func setup(_ viewModel: RecipeCellViewModel) {
+        recipeLabel.text = viewModel.recipeName
+        recipeImageView.sd_setImage(with: viewModel.imageUrl, placeholderImage: #imageLiteral(resourceName: "food_placeholder"))
+    }
 }
