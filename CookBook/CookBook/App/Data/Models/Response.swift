@@ -8,6 +8,6 @@
 import Foundation
 
 enum Response {
-    case success([RecipeData])
+    case success([Recipe])
     case failure(Error)
 }

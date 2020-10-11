@@ -31,6 +31,7 @@ struct RecipeData {
     }
     
     init(with entry: Entry) {
+       
         let title = entry.fields["title"] as? String
         let description = entry.fields["description"] as? String
         let chef = entry.fields.linkedEntry(at: "chef")?.fields["name"] as? String
@@ -42,7 +43,22 @@ struct RecipeData {
         } else {
             tags = []
         }
+        
         self.init(title: title, description: description, chef: chef, imageURL: imageURL, tags: tags)
     }
     
+    static func toRecipe(from data: RecipeData) -> Recipe {
+        
+        let title = data.title
+        let tags = data.tags
+        let imageURL = data.imageURL
+        let description = data.description
+        let chef = data.chef
+        
+        return Recipe(title: title,
+                      description: description,
+                      chef: chef,
+                      imageURL: imageURL,
+                      tags: tags)
+    }
 }

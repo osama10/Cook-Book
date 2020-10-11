@@ -15,7 +15,6 @@ protocol RecipeRepositoryProtocol {
 
 final class RecipeRepository: RecipeRepositoryProtocol {
     
-    
     func fetchRecipe(onCompletion: @escaping (Response) -> ()) {
         
         let client = Client(spaceId: Constants.ContentfulConfig.spaceId,
@@ -29,15 +28,13 @@ final class RecipeRepository: RecipeRepositoryProtocol {
             switch result {
             case .success(let arrayResponse):
                 let entries = arrayResponse.items
-                let result = entries.map(RecipeData.init)
-                onCompletion(.success(result))
+                let data = entries.map(RecipeData.init)
+                let recipes = data.map(RecipeData.toRecipe)
+                onCompletion(.success(recipes))
             case .failure(let error):
                 onCompletion(.failure(error))
             }
         }
-        
     }
-    
-    
-    
+
 }

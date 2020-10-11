@@ -18,6 +18,8 @@
 		03EA6D1725336FA1009A4CCD /* RecipieDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EA6D1625336FA1009A4CCD /* RecipieDataModel.swift */; };
 		03EA6D262533774E009A4CCD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EA6D252533774E009A4CCD /* Constants.swift */; };
 		03EA6D2E2533798D009A4CCD /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EA6D2D2533798D009A4CCD /* Response.swift */; };
+		03EA6D34253382EE009A4CCD /* RecipeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EA6D33253382EE009A4CCD /* RecipeUseCase.swift */; };
+		03EA6D3D2533830A009A4CCD /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EA6D3C2533830A009A4CCD /* Recipe.swift */; };
 		1A916E3AF91CCAD694BAF0CE /* Pods_CookBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 052C761CCE4F61FC3737454F /* Pods_CookBook.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +57,8 @@
 		03EA6D1625336FA1009A4CCD /* RecipieDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipieDataModel.swift; sourceTree = "<group>"; };
 		03EA6D252533774E009A4CCD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		03EA6D2D2533798D009A4CCD /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		03EA6D33253382EE009A4CCD /* RecipeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeUseCase.swift; sourceTree = "<group>"; };
+		03EA6D3C2533830A009A4CCD /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		052C761CCE4F61FC3737454F /* Pods_CookBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CookBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC3FD4E429EADE20B4D96021 /* Pods-CookBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CookBook.debug.xcconfig"; path = "Target Support Files/Pods-CookBook/Pods-CookBook.debug.xcconfig"; sourceTree = "<group>"; };
 		DAAC02344D4CB81905C6FD92 /* Pods-CookBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CookBook.release.xcconfig"; path = "Target Support Files/Pods-CookBook/Pods-CookBook.release.xcconfig"; sourceTree = "<group>"; };
@@ -193,6 +197,8 @@
 		03EA6D0C25336D9B009A4CCD /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				03EA6D3B253382FF009A4CCD /* Models */,
+				03EA6D32253382D4009A4CCD /* UseCases */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -202,6 +208,22 @@
 			children = (
 				03EA6D1625336FA1009A4CCD /* RecipieDataModel.swift */,
 				03EA6D2D2533798D009A4CCD /* Response.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		03EA6D32253382D4009A4CCD /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				03EA6D33253382EE009A4CCD /* RecipeUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		03EA6D3B253382FF009A4CCD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				03EA6D3C2533830A009A4CCD /* Recipe.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -403,7 +425,9 @@
 				03EA6CC62533651D009A4CCD /* SceneDelegate.swift in Sources */,
 				03EA6D1725336FA1009A4CCD /* RecipieDataModel.swift in Sources */,
 				03EA6D262533774E009A4CCD /* Constants.swift in Sources */,
+				03EA6D3D2533830A009A4CCD /* Recipe.swift in Sources */,
 				03EA6D2E2533798D009A4CCD /* Response.swift in Sources */,
+				03EA6D34253382EE009A4CCD /* RecipeUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
