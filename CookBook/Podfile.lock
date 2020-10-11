@@ -1,0 +1,24 @@
+PODS:
+  - Contentful (5.3.0):
+    - Contentful/ImageOptions (= 5.3.0)
+  - Contentful/ImageOptions (5.3.0)
+  - SDWebImage (5.9.2):
+    - SDWebImage/Core (= 5.9.2)
+  - SDWebImage/Core (5.9.2)
+
+DEPENDENCIES:
+  - Contentful
+  - SDWebImage
+
+SPEC REPOS:
+  trunk:
+    - Contentful
+    - SDWebImage
+
+SPEC CHECKSUMS:
+  Contentful: c493959edb763e9f2e440bde30c4a5cfb0aeabb7
+  SDWebImage: 0b42b8719ab0c5257177d5894306e8a336b21cbb
+
+PODFILE CHECKSUM: d488a79a497d484f92c003c9254fe5829ff3ed96
+
+COCOAPODS: 1.9.3
