@@ -8,7 +8,7 @@
 import Foundation
 import Contentful
 
-struct RecipieDataModel {
+struct RecipeData {
     
     static let contentId = "recipe"
     
