@@ -14,7 +14,6 @@
 		03EA6CCD2533651E009A4CCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03EA6CCC2533651E009A4CCD /* Assets.xcassets */; };
 		03EA6CD02533651E009A4CCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03EA6CCE2533651E009A4CCD /* LaunchScreen.storyboard */; };
 		03EA6CDB2533651E009A4CCD /* CookBookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EA6CDA2533651E009A4CCD /* CookBookTests.swift */; };
-		03EA6CE62533651E009A4CCD /* CookBookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EA6CE52533651E009A4CCD /* CookBookUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,8 +46,6 @@
 		03EA6CDA2533651E009A4CCD /* CookBookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookBookTests.swift; sourceTree = "<group>"; };
 		03EA6CDC2533651E009A4CCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03EA6CE12533651E009A4CCD /* CookBookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CookBookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		03EA6CE52533651E009A4CCD /* CookBookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookBookUITests.swift; sourceTree = "<group>"; };
-		03EA6CE72533651E009A4CCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +78,6 @@
 			children = (
 				03EA6CC22533651D009A4CCD /* CookBook */,
 				03EA6CD92533651E009A4CCD /* CookBookTests */,
-				03EA6CE42533651E009A4CCD /* CookBookUITests */,
 				03EA6CC12533651D009A4CCD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -117,15 +113,6 @@
 				03EA6CDC2533651E009A4CCD /* Info.plist */,
 			);
 			path = CookBookTests;
-			sourceTree = "<group>";
-		};
-		03EA6CE42533651E009A4CCD /* CookBookUITests */ = {
-			isa = PBXGroup;
-			children = (
-				03EA6CE52533651E009A4CCD /* CookBookUITests.swift */,
-				03EA6CE72533651E009A4CCD /* Info.plist */,
-			);
-			path = CookBookUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,7 +263,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03EA6CE62533651E009A4CCD /* CookBookUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
