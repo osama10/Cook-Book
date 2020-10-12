@@ -9,6 +9,7 @@ import UIKit
 
 protocol RecipeListCoordinatorDependencies {
     func makeRecipeListViewController(actions: RecipeListViewModelAction) -> RecipeListViewController
+    func makeRecipeDetailViewController(recipe: Recipe) -> RecipeDetailViewController
 }
 
 final class RecipeListCoordinator: BaseCoordinator {
@@ -31,8 +32,7 @@ final class RecipeListCoordinator: BaseCoordinator {
     }
     
     private func showDetailsViewController(recipe: Recipe) {
-        let storyboard = UIStoryboard(storyboard: .main)
-        let vc: RecipeDetailViewController = storyboard.instantiateViewController()
-        navigation?.pushViewController(vc, animated: true)
+        let detailVC = dependencies.makeRecipeDetailViewController(recipe: recipe)
+        navigation?.pushViewController(detailVC, animated: true)
     }
 }

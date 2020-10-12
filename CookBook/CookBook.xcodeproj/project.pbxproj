@@ -17,6 +17,7 @@
 		032CFF962534D5C30030545B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032CFF952534D5C30030545B /* AppCoordinator.swift */; };
 		032CFF9B2534E3B20030545B /* AppNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032CFF9A2534E3B20030545B /* AppNavigation.swift */; };
 		032CFFA42534EA590030545B /* RecipeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032CFFA32534EA590030545B /* RecipeDetailViewController.swift */; };
+		032CFFAC2534F3260030545B /* RecipeDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032CFFAB2534F3260030545B /* RecipeDetailViewModel.swift */; };
 		03EA6CC42533651D009A4CCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EA6CC32533651D009A4CCD /* AppDelegate.swift */; };
 		03EA6CC62533651D009A4CCD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EA6CC52533651D009A4CCD /* SceneDelegate.swift */; };
 		03EA6CC82533651D009A4CCD /* RecipeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EA6CC72533651D009A4CCD /* RecipeListViewController.swift */; };
@@ -68,6 +69,7 @@
 		032CFF952534D5C30030545B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		032CFF9A2534E3B20030545B /* AppNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigation.swift; sourceTree = "<group>"; };
 		032CFFA32534EA590030545B /* RecipeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailViewController.swift; sourceTree = "<group>"; };
+		032CFFAB2534F3260030545B /* RecipeDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailViewModel.swift; sourceTree = "<group>"; };
 		03EA6CC02533651D009A4CCD /* CookBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CookBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03EA6CC32533651D009A4CCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03EA6CC52533651D009A4CCD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +141,31 @@
 				03EA6CC92533651D009A4CCD /* Main.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		032CFFA82534F2F30030545B /* RecipeDetails */ = {
+			isa = PBXGroup;
+			children = (
+				032CFFAA2534F30C0030545B /* ViewModel */,
+				032CFFA92534F3010030545B /* View */,
+			);
+			path = RecipeDetails;
+			sourceTree = "<group>";
+		};
+		032CFFA92534F3010030545B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				032CFFA32534EA590030545B /* RecipeDetailViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		032CFFAA2534F30C0030545B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				032CFFAB2534F3260030545B /* RecipeDetailViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		03EA6CB72533651D009A4CCD = {
@@ -286,8 +313,8 @@
 		03EA6D4925338DE9009A4CCD /* Recipes */ = {
 			isa = PBXGroup;
 			children = (
+				032CFFA82534F2F30030545B /* RecipeDetails */,
 				03EA6D4A25338DF2009A4CCD /* RecipeList */,
-				032CFFA32534EA590030545B /* RecipeDetailViewController.swift */,
 			);
 			path = Recipes;
 			sourceTree = "<group>";
@@ -544,6 +571,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				032CFF6F2534C4B90030545B /* LoadingView.swift in Sources */,
+				032CFFAC2534F3260030545B /* RecipeDetailViewModel.swift in Sources */,
 				03EA6D7D2534B76D009A4CCD /* UITableView+Extensions.swift in Sources */,
 				03EA6D6125339910009A4CCD /* Observable.swift in Sources */,
 				03EA6CC82533651D009A4CCD /* RecipeListViewController.swift in Sources */,

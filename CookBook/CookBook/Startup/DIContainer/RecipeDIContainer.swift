@@ -12,6 +12,7 @@ final class RecipeDIContainer {
 }
 
 extension RecipeDIContainer: RecipeListCoordinatorDependencies {
+    // MARK:- RecipeList
     func makeRecipeFlowCoodinator(navigation: AppNavigation) -> RecipeListCoordinator { RecipeListCoordinator(dependencies: self, navigation: navigation)
     }
     
@@ -26,5 +27,15 @@ extension RecipeDIContainer: RecipeListCoordinatorDependencies {
         let recipeListVC: RecipeListViewController = storyboard.initialViewController()
         recipeListVC.viewModel = makeRecipeListViewModel(actions: actions)
         return recipeListVC
+    }
+    
+    // MARK:- Recipe Details
+
+    func makeRecipeDetailViewModel(recipe: Recipe) -> RecipeDetailViewModel { RecipeDetailViewModel(recipe: recipe) }
+    func makeRecipeDetailViewController(recipe: Recipe) -> RecipeDetailViewController {
+        let storyboard = UIStoryboard(storyboard: .main)
+        let detailVC: RecipeDetailViewController = storyboard.instantiateViewController()
+        detailVC.viewModel = makeRecipeDetailViewModel(recipe: recipe)
+        return detailVC
     }
 }
