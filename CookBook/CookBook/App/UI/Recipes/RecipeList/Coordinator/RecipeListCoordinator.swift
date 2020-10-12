@@ -31,6 +31,8 @@ final class RecipeListCoordinator: BaseCoordinator {
     }
     
     private func showDetailsViewController(recipe: Recipe) {
-        
+        let storyboard = UIStoryboard(storyboard: .main)
+        let vc: RecipeDetailViewController = storyboard.instantiateViewController()
+        navigation?.pushViewController(vc, animated: true)
     }
 }

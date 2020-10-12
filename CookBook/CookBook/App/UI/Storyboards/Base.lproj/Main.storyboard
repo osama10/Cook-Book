@@ -36,7 +36,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-557" y="37"/>
+            <point key="canvasLocation" x="-1258" y="5"/>
+        </scene>
+        <!--Recipe Detail View Controller-->
+        <scene sceneID="xbT-Js-LiM">
+            <objects>
+                <viewController storyboardIdentifier="RecipeDetailViewController" id="QBW-Rw-D9L" customClass="RecipeDetailViewController" customModule="CookBook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vsp-k3-lfF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="rwC-qg-XZN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tne-cj-Y5n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-368" y="12"/>
         </scene>
     </scenes>
     <resources>
