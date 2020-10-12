@@ -8,7 +8,7 @@
 import UIKit
 import SDWebImage
 
-class RecipeTableViewCell: UITableViewCell {
+class RecipeTableViewCell: UITableViewCell, NibLoadableView, ReusableView {
 
     @IBOutlet weak var recipeImageView: UIImageView!
     @IBOutlet weak var recipeLabel: UILabel!
