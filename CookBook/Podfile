@@ -6,7 +6,8 @@ target 'CookBook' do
   use_frameworks!
 
   # Pods for CookBook
-	pod 'Contentful'
+    pod 'Contentful'
   	pod 'SDWebImage'
+    pod 'Down'
 
 end

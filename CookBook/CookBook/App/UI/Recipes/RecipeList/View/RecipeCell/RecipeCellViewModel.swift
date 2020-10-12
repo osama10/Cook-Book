@@ -10,5 +10,4 @@ import Foundation
 struct RecipeCellViewModel {
     let recipeName: String
     let imageUrl: URL?
-
 }

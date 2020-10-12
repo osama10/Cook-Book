@@ -28,7 +28,7 @@ class RecipeDetailViewController: UIViewController {
         titleLabel.text = viewModel.title
         title = "Cook Book"
         chefLabel.text = viewModel.chef
-        descriptionLabel.text = viewModel.descprition
+        descriptionLabel.attributedText = viewModel.descprition
         tagsLabel.text = viewModel.tags
     }
 }
