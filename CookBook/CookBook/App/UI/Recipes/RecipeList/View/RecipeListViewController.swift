@@ -25,6 +25,7 @@ class RecipeListViewController: UIViewController, AlertsPresentable {
     }
     
     private func bindViewModel() {
+        title = viewModel.title
         viewModel.error.observe(on: self) { [weak self] in self?.showAlert(with: "Error", and: $0) }
         viewModel.reload.observe(on: self) { [weak self] _ in self?.tableView.reloadData() }
         viewModel.loader.observe(on: self) { ($0) ? LoadingView.show() : LoadingView.hide() }
@@ -46,6 +47,7 @@ extension RecipeListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         viewModel.didTapOnRow(at: indexPath.row)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -29,16 +30,25 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l5V-cg-yy3">
+                        <rect key="frame" x="0.0" y="123" width="443" height="1"/>
+                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="FWB-vZ-ozp"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="l5V-cg-yy3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="2rm-Dt-AFA"/>
                     <constraint firstItem="ym5-oL-P3a" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="DtR-XX-MWi"/>
                     <constraint firstItem="ym5-oL-P3a" firstAttribute="top" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="EbS-yG-eMk"/>
                     <constraint firstItem="bq7-5P-FUO" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="LPr-WQ-3WP"/>
                     <constraint firstAttribute="trailing" secondItem="ym5-oL-P3a" secondAttribute="trailing" constant="8" id="S8B-xg-Mvb"/>
                     <constraint firstItem="bq7-5P-FUO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="dHM-Oh-yhr"/>
                     <constraint firstItem="ym5-oL-P3a" firstAttribute="leading" secondItem="bq7-5P-FUO" secondAttribute="trailing" constant="8" id="fbj-U9-79Q"/>
-                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ym5-oL-P3a" secondAttribute="bottom" constant="8" id="glh-PW-wC6"/>
                     <constraint firstItem="bq7-5P-FUO" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="jsj-a2-DiN"/>
+                    <constraint firstAttribute="bottom" secondItem="l5V-cg-yy3" secondAttribute="bottom" id="pVb-hw-uNc"/>
+                    <constraint firstAttribute="trailing" secondItem="l5V-cg-yy3" secondAttribute="trailing" id="qkm-aL-Zo0"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -46,7 +56,12 @@
                 <outlet property="recipeImageView" destination="bq7-5P-FUO" id="BqA-hU-vOa"/>
                 <outlet property="recipeLabel" destination="ym5-oL-P3a" id="Ae8-5V-MMb"/>
             </connections>
-            <point key="canvasLocation" x="-575" y="31"/>
+            <point key="canvasLocation" x="-576.08695652173913" y="30.803571428571427"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

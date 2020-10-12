@@ -15,7 +15,7 @@ class RecipeTableViewCell: UITableViewCell, NibLoadableView, ReusableView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        imageView?.round()
+        recipeImageView?.round()
     }
     
     func setup(_ viewModel: RecipeCellViewModel) {

@@ -6,3 +6,5 @@
 //
 
 import Foundation
+
+protocol BaseCoordinator { func start() }

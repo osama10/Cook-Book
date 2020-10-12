@@ -5,4 +5,26 @@
 //  Created by Osama Bashir on 10/12/20.
 //
 
-import Foundation
+import UIKit
+
+final class RecipeDIContainer {
+    lazy var repository: RecipeRepositoryProtocol = RecipeRepository()
+}
+
+extension RecipeDIContainer: RecipeListCoordinatorDependencies {
+    func makeRecipeFlowCoodinator(navigation: AppNavigation) -> RecipeListCoordinator { RecipeListCoordinator(dependencies: self, navigation: navigation)
+    }
+    
+    func makeRecipeUseCase() -> RecipeUseCaseProtocol { RecipeUseCase(repository: repository) }
+    
+    func makeRecipeListViewModel(actions: RecipeListViewModelAction) -> RecipeListViewModel {
+        RecipeListViewModel(actions: actions, useCase: makeRecipeUseCase())
+    }
+    
+    func makeRecipeListViewController(actions: RecipeListViewModelAction) -> RecipeListViewController {
+        let storyboard = UIStoryboard(storyboard: .main)
+        let recipeListVC: RecipeListViewController = storyboard.initialViewController()
+        recipeListVC.viewModel = makeRecipeListViewModel(actions: actions)
+        return recipeListVC
+    }
+}
