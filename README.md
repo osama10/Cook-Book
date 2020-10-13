@@ -4,7 +4,7 @@
 A cooking recipe application that uses contentful api to get recipes. It has two screen. First screen has recipes list and the other one has recipes details.
 
 ## How to use it
-This application is build on on **Xcode 12.0.1** using swift 5.0. Minimum deployement target is 13.1 . It's advised to use the same configurations to run the app.
+Please clone from **master**. This application is build on on **Xcode 12.0.1** using swift 5.0. Minimum deployement target is 13.1 . It's advised to use the same configurations to run the app.
 Please run `pod install` after cloning the project.
 
 ## Technical Details
