@@ -3,6 +3,11 @@ PODS:
     - Contentful/ImageOptions (= 5.3.0)
   - Contentful/ImageOptions (5.3.0)
   - Down (0.9.3)
+  - iOSSnapshotTestCase (6.2.0):
+    - iOSSnapshotTestCase/SwiftSupport (= 6.2.0)
+  - iOSSnapshotTestCase/Core (6.2.0)
+  - iOSSnapshotTestCase/SwiftSupport (6.2.0):
+    - iOSSnapshotTestCase/Core
   - SDWebImage (5.9.2):
     - SDWebImage/Core (= 5.9.2)
   - SDWebImage/Core (5.9.2)
@@ -10,19 +15,22 @@ PODS:
 DEPENDENCIES:
   - Contentful
   - Down
+  - iOSSnapshotTestCase
   - SDWebImage
 
 SPEC REPOS:
   trunk:
     - Contentful
     - Down
+    - iOSSnapshotTestCase
     - SDWebImage
 
 SPEC CHECKSUMS:
   Contentful: c493959edb763e9f2e440bde30c4a5cfb0aeabb7
   Down: 4553b984236807e384fa0ef7c7e360ef9f7c425d
+  iOSSnapshotTestCase: 9ab44cb5aa62b84d31847f40680112e15ec579a6
   SDWebImage: 0b42b8719ab0c5257177d5894306e8a336b21cbb
 
-PODFILE CHECKSUM: fd00c8ddeeb6a9c7e98433ea7cb8f8d06fa1e8a2
+PODFILE CHECKSUM: 95625e9435eb9d2745db3febaedd9ad525ea1856
 
 COCOAPODS: 1.9.3

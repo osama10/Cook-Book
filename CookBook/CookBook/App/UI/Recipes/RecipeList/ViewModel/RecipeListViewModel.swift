@@ -8,7 +8,7 @@
 import Foundation
 
 struct RecipeListViewModelAction {
-    var showDetails: (Recipe) -> ()?
+    var showDetails: ((Recipe) -> ())?
 }
 
 protocol RecipeListViewModelInput {
@@ -53,7 +53,7 @@ final class RecipeListViewModel: RecipeListViewModelProtocol {
     }
     
     func didTapOnRow(at index: Int) {
-        actions.showDetails(recipes[index])
+        actions.showDetails?(recipes[index])
     }
     
     func celViewModel(at index: Int) -> RecipeCellViewModel {

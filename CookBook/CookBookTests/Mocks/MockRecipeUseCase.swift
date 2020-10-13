@@ -10,7 +10,7 @@ import Foundation
 
 final class MockRecipeUseCase: RecipeUseCaseProtocol {
     
-    let responseType: FakeRecipeData.ResponseType = .success
+    var responseType: FakeRecipeData.ResponseType = .success
     func fetchRecipes(onSuccess: @escaping ([Recipe]) -> (), onFailure: @escaping (String) -> ()) {
         switch responseType {
         case .success:
