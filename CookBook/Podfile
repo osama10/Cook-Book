@@ -9,10 +9,11 @@ target 'CookBook' do
     pod 'Contentful'
   	pod 'SDWebImage'
     pod 'Down'
-    pod 'iOSSnapshotTestCase'
 
     target 'CookBookTests' do
       inherit! :search_paths
+      pod 'iOSSnapshotTestCase'
+
     end
 
 end
