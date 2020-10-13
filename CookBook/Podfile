@@ -6,14 +6,10 @@ target 'CookBook' do
   use_frameworks!
 
   # Pods for CookBook
-    pod 'Contentful'
-  	pod 'SDWebImage'
-    pod 'Down'
+  target 'CookBookTests' do
+    inherit! :search_paths
+    pod 'iOSSnapshotTestCase'
 
-    target 'CookBookTests' do
-      inherit! :search_paths
-      pod 'iOSSnapshotTestCase'
-
-    end
+  end
 
 end
