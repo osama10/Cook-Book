@@ -11,13 +11,13 @@ struct RecipeListViewModelAction {
     var showDetails: (Recipe) -> ()?
 }
 
-protocol RecipeListVieModelInput {
+protocol RecipeListViewModelInput {
     func viewDidLoad()
     func didTapOnRow(at index: Int)
     func celViewModel(at index: Int) -> RecipeCellViewModel
 }
 
-protocol RecipeListVieModelOutput {
+protocol RecipeListViewModelOutput {
     var totalRows: Int { get }
     var heightForRow: Int { get }
     var title: String { get }
@@ -26,9 +26,9 @@ protocol RecipeListVieModelOutput {
     var error: Observable<String> { get }
 }
 
-protocol RecipeListVieModelProtocol: RecipeListVieModelInput, RecipeListVieModelOutput { }
+protocol RecipeListViewModelProtocol: RecipeListViewModelInput, RecipeListViewModelOutput { }
 
-final class RecipeListViewModel: RecipeListVieModelProtocol {
+final class RecipeListViewModel: RecipeListViewModelProtocol {
     
     var loader: Observable<Bool> = Observable(false)
     var reload: Observable<Void> = Observable(())
@@ -39,8 +39,8 @@ final class RecipeListViewModel: RecipeListVieModelProtocol {
     var title: String { "Cook Book" }
     private var recipes = [Recipe]() { didSet { reload.value = () } }
     
-    let actions: RecipeListViewModelAction
-    let useCase: RecipeUseCaseProtocol
+    private let actions: RecipeListViewModelAction
+    private let useCase: RecipeUseCaseProtocol
     
     init(actions: RecipeListViewModelAction, useCase: RecipeUseCaseProtocol) {
         self.actions = actions
