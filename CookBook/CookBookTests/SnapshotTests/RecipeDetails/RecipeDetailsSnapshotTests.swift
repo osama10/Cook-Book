@@ -13,7 +13,6 @@ class RecipeDetailsSnapshotTests: FBSnapshotTestCase {
 
     override func setUp() {
         super.setUp()
-        recordMode = true
     }
 
     func test_whenDataIsProvided_detailViewShowIt() {
