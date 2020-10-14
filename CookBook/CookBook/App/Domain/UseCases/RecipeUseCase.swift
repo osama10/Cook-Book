@@ -23,7 +23,6 @@ final class RecipeUseCase: RecipeUseCaseProtocol {
         repository.fetchRecipe { (response) in
             switch response {
             case .success(let data):
-                print(data)
                 onSuccess(data)
             case .failure(_):
                 onFailure(Constants.errorMessage)
