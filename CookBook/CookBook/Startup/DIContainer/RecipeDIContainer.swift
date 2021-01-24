@@ -8,7 +8,7 @@
 import UIKit
 
 final class RecipeDIContainer {
-    lazy var repository: RecipeRepositoryProtocol = RecipeRepository()
+    lazy var repository: RecipeRepositoryProtocol = RecipeDataStore()
 }
 
 extension RecipeDIContainer: RecipeListCoordinatorDependencies {
